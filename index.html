@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pet-Friendly City</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<div class="chatbot-container" id="chatbot">
+    <div class="chat-header">
+        <h4>PawBuddy 🐾</h4>
+        <button onclick="toggleChat()">✖</button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+        <p class="bot">Hi there! I'm PawBuddy. How can I help you today?</p>
+    </div>
+    <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Ask me anything..." onkeydown="handleKey(event)">
+        <button onclick="sendMessage()">➤</button>
+    </div>
+</div>
+
+<button class="chatbot-toggle" onclick="toggleChat()">💬</button>
+
+<body>
+    
+    <section class="hero">
+        <h1>Turning Streets into Safe Havens for Every Paw!</h1>
+        <p>Join the movement to make your city Pet-Friendly.</p>
+        <div class="cta-buttons">
+            <button onclick="alert('Join the Movement Coming Soon')"> Join the Movement </button>
+            <button onclick="document.getElementById('volunteer').scrollIntoView({ behavior: 'smooth'})"> Volunteer Now </button>
+            <button onclick="alert('Learn More Coming Soon')"> Learn More </button>
+        </div>
+    </section>
+
+    <section id="volunteer">
+        <h2>Volunteer with Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="text" placeholder="Email Address" required />
+            <input type="text" placeholder="City" required />
+            <select>
+                <option value="">Select Role</option>
+                <option value="volunteer">Volunteer</option>
+                <option value="donor">Donor</option>
+                <option value="foster">Foster Care</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section class="stories">
+        <h2>Impact Stories</h2>
+        <div class="story-grid">
+            <div class="story-card">
+                <h3>Delhi's Dog Parks</h3>
+                <p>50+ parks made pet-safe in the capital city.</p>
+            </div>
+            <div class="story-card">
+                <h3>The Boy & 12 Dogs</h3>
+                <p>A young boy rescued and fostered 12 street dogs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="carousel">
+        <h2>Adopt a Pet</h2>
+        <div class="carousel-container">
+            
+            <div class="pet-card">
+                <img src="https://i.postimg.cc/dVbcxFhr/OIP.jpg" alt="Pet 1" />
+                <h4>Bruno</h4>
+                <p>Male • 2 years • Labrador</p>
+                <button>Adopt</button>
+            </div>
+
+            <div class="pet-card">
+                <img src="https://i.postimg.cc/PqQVQnYt/OIP-1.jpg" alt="Pet 2" />
+                <h4>Luna</h4>
+                <p>Female • 1.5 years • Indie</p>
+                <button>Adopt</button>
+            </div>
+
+            <div class="pet-card">
+                <img src="https://i.postimg.cc/B6ZYh7B2/OIP-2.jpg" alt="Pet 3" />
+                <h4>Milo</h4>
+                <p>Male • 6 months • Persian Cat</p>
+                <button>Adopt</button>
+            </div>
+
+        </div>
+        <p>(More Pet Carousel Coming Soon)</p>
+    </section>
+
+    <section class="volunteer" id="volunteer">
+        <h2>Join the Movement</h2>
+        <p>Become a part of our mission to make every city Pet-Friendly.</p>
+        <form action="#" method="post" class="volunteer-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="City" required>
+            <select required>
+                <option value="">Select Role</option>
+                <option value="Volunteer">Volunteer</option>
+                <option value="Organizer">Organizer</option>
+                <option value="Support">Support</option>
+            </select>
+            <textarea placeholder="Why do you want to join?" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section class="impact-stories" id="stories">
+        <h2>Impact Stories 🐕</h2>
+        <p>Real stories that prove kindness still exists!</p>
+
+        <div class="story-cards">
+
+            <div class="story">
+                <img src="https://i.postimg.cc/BvZZgskp/OIP-3.jpg" alt="Adopted Pet">
+                <h3>Milo's New Home</h3>
+                <p>Milo was rescued by a group of volunteers and now lives happilt with a family in Pune.</p>
+            </div>
+
+            <div class="story">
+                <img src="https://i.postimg.cc/9ffV9bwN/OIP-4.jpg" alt="Happy Pet">
+                <h3>Hope for Bruno</h3>
+                <p>After a tough life on the streets, Bruno found shelter through our adoption drive in Delhi.</p>
+            </div>
+
+            <div class="story placeholder">
+                <h3>Your Story Here?</h3>
+                <p>Soon, this space could feature *your* volunteer experience or rescue mission</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="volunteer-section" id="volunteer">
+        <h2>💪 Join the Movement - Be a Volunteer!</h2>
+        <p>Fill in your details and be a part of a Pet-Friendly revolution 🐕‍🦺</p>
+        <form class="volunteer-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="text" placeholder="City" required />
+            <select required>
+              <option value="">Select Role Preference</option>
+              <option value="Awareness Volunteer">Awareness Volunteer</option>
+              <option value="Pet Caregiver">Pet Caregiver</option>
+              <option value="Tech Support">Tech Support</option>
+              <option value="Event Manager">Event Manager</option>
+            </select>
+            <textarea placeholder="Why do you want to join?" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+          </form>
+    </section>
+
+    <section class="impact-section" id="impact">
+        <h2>🌟 Impact Stories</h2>
+        <p>Every pet-friendly act creates ripples of kindness 🐕💖</p>
+      
+        <div class="impact-cards">
+          <div class="impact-card">
+            <img src="https://i.postimg.cc/L6CxYB97/download-1.jpg" alt="Rescued Puppy" />
+            <h3>From Stray to Safe 🏠</h3>
+            <p>Ramu was rescued during a rainstorm and now lives happily with a loving family in Pune!</p>
+          </div>
+      
+          <div class="impact-card">
+            <img src="https://i.postimg.cc/fLNCn8C3/OIP-7.jpg" alt="Volunteers Feeding Dogs" />
+            <h3>Food Drives That Heal 🍲</h3>
+            <p>College volunteers organize weekly food runs for strays in their city. Over 500 dogs fed in 2 months!</p>
+          </div>
+      
+          <div class="impact-card">
+            <img src="https://i.postimg.cc/YScfYdJX/OIP-8.jpg" alt="Dog getting vaccinated" />
+            <h3>Vaccination Drive 💉</h3>
+            <p>Our first pet health camp vaccinated over 200 street animals. Big step for a safer community!</p>
+          </div>
+        </div>
+      </section>      
+    
+    <section class="adoption-carousel">
+        <h2>🐕 Find Your Future Best Friend</h2>
+        <div class="carousel">
+
+            <div class="pet-card">
+                <img src="https://i.postimg.cc/446gJXMF/OIP-5.jpg" alt="Pet Image">
+                <h3>Simba</h3>
+                <p>Playful 2-year-old who loves cuddles and long naps.</p>
+            </div>
+
+            <div class="pet-card">
+                <img src="https://i.postimg.cc/C1pQtqFM/OIP-6.jpg" alt="Pet Image">
+                <h3>Luna</h3>
+                <p>Adventurous and gentle. Great with kids and other pets.</p>
+            </div>
+
+        </div>
+
+    </section>
+    
+    <!-- <footer>
+        <p>Inspired by collegetips.in/pfc | Designed by Aditya Vardhan</p>
+    </footer> -->
+
+    <script>
+        function toggleChat() {
+            const chat = document.getElementById('chatbot');
+            chat.style.display = chat.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function sendMessage() {
+            const input = document.getElementById("user-input");
+            const msg = input.value.trim();
+            if (!msg) return;
+
+            const chatBox = document.getElementById("chat-messages");
+
+            const userMsg = document.createElement("p");
+            userMsg.className = "user";
+            userMsg.textContent = msg;
+            chatBox.appendChild(userMsg);
+
+            const botMsg = document.createElement("p");
+            botMsg.className = "bot";
+            botMsg.textContent = "Thanks for your message! (Live AI reply coming soon)";
+            setTimeout(() => chatBox.appendChild(botMsg), 500);
+
+            input.value = "";
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function handleKey(e) {
+            if (e.key === "Enter") sendMessage();
+        }
+    </script>
+    <script></script>
+
+    <footer class="credits-section">
+        <p>💡 Inspired by <a href="https://collegetips.in/pfc/" target="_blank">CollegeTips.in - PFC Campaign</a></p>
+        <p>🌐 Website created using AI tools like ChatGPT, Canva, and Vercel</p>
+        <p>🧑‍💻 Crafted with love by Aditya Vardhan, Intern at CollegeTips.in ❤️🐾</p>
+      </footer>
+      
+
+</body>
+</html>
